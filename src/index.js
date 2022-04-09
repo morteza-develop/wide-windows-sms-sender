@@ -12,12 +12,14 @@ let mainWindow;
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 900,
+    height: 700,
   });
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
+
+  mainWindow.setMenuBarVisibility(false);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
